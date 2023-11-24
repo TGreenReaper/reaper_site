@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title id="title"> Clock</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="icon" href="icons/clock.png">
+        <script src="moment.js"></script>
+        <img src="icons/back.png" height="50px" width="50px"  onclick="location.href = 'index.html' " class="back" />
+
+    </head>
+    <body>
+        <div class="clock">
+            <h1 id="clock"></h1>
+        </div>
+    </body>
+    <script>
+         document.getElementById("clock").innerHTML =  "Time is: "+  moment().format("LTS")
+         document.getElementById("title").innerHTML =  "Time is: "+ moment().format("LTS") 
+   
+
+        function upd(){
+          document.getElementById("title").innerHTML =   "Time is: " +moment().format("LTS") 
+          document.getElementById("clock").innerHTML =   "Time is: " + moment().format("LTS")   
+  
+        }
+
+        setInterval(upd , 1000)
+    </script>
+
+    <style>
+
+
+@media only screen and (max-width:600px){
+    #clock {
+            color:lime;
+            left: 0%;
+            font-family: sans-serif , 'Robotto';
+            position: absolute;
+            top:40%;
+            right:30%;
+
+        }
+}
+
+@keyframes body {
+    from {
+        opacity: .1;
+        width: 10%;
+        height: 10%;
+    } to {
+        opacity: .3;
+        width: 40%;
+        height: 40%;
+    } to {
+        opacity: .5;
+        width: 60%;
+        height: 60%;
+    } to {
+        opacity: .8;
+        width: 70%;
+        height: 70%;
+    } to {
+        opacity: 1;
+        width: 100%;
+        height: 100%;
+    }
+}
+        .back:hover {
+            cursor: pointer;
+        }
+
+        body,html {
+            background-color:rgb(32,32,32);
+            animation: body .5s ease;
+        }
+
+        #clock {
+            color:lime;
+            text-align: center;
+            position: absolute;
+            left: 40%;
+            font-family: sans-serif , 'Robotto';
+            top:40%;
+
+        }
+    </style>
+</html>

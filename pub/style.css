@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap');
+
+
+@keyframes body {
+    from {
+        opacity: .1;
+        width: 10%;
+        height: 10%;
+    } to {
+        opacity: .3;
+        width: 40%;
+        height: 40%;
+    } to {
+        opacity: .5;
+        width: 60%;
+        height: 60%;
+    } to {
+        opacity: .8;
+        width: 70%;
+        height: 70%;
+    } to {
+        opacity: 1;
+        width: 100%;
+        height: 100%;
+    }
+}
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: rgb(32, 32, 32);
+    height: 100%;
+    animation: body .5s forwards;
+}
+
+
+
+.main {
+    width: 45%;
+    height: auto;
+    position: relative;
+    left: 26%;
+    top:25%;
+    display: flexbox;
+    font-family: 'Pixelify Sans', sans-serif;
+}
+
+.main h1 {
+    text-align: center;
+    color: lime;
+    border-bottom: 1px solid lime;
+}
+
+ .f-btn {
+  color:green;
+  border: none;
+  height:35px;width: 55px;
+  background-image: url("../icons/download.png");
+  background-position: center;
+  background-size:40px 40px;
+  background-repeat: no-repeat;
+  background-color: rgb(4, 150, 4);
+  border-radius: 20px;
+}
+
+.f-btn:hover {
+    cursor: pointer;
+    opacity: .6;
+}
+
+.f-p {
+    font-size: 20px;
+    color: lime;
+    font-family: 'Pixelify Sans', sans-serif;
+    
+}
+
+.ti-btn {
+    color:green;
+    border: none;
+    height:35px;width: 55px;
+    background-image: url("../icons/clock.png");
+    background-position: center;
+    background-size:40px 40px;
+    background-repeat: no-repeat;
+    background-color: rgb(4, 150, 4);
+    border-radius: 20px;
+  }
+  
+  .ti-btn:hover {
+      cursor: pointer;
+      opacity: .6;
+
+  }
+  
+  .ti-p {
+      font-size: 20px;
+      color: lime;
+      font-family: 'Pixelify Sans', sans-serif;
+      
+  }
