@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="icon" href="icons/clock.png">
         <script src="moment.js"></script>
-        <img src="icons/back.png" height="50px" width="50px"  onclick="location.href = 'index.html' " class="back" />
+        <img src="icons/back.png"  class="back" height="50px" width="50px"  onclick="location.href = 'index.html' " class="back" />
 
     </head>
     <body>
@@ -13,6 +13,8 @@
             <h1 id="clock"></h1>
         </div>
     </body>
+
+
     <script>
          document.getElementById("clock").innerHTML =  "Time is: "+  moment().format("LTS")
          document.getElementById("title").innerHTML =  "Time is: "+ moment().format("LTS") 
@@ -25,6 +27,15 @@
         }
 
         setInterval(upd , 1000)
+
+
+        var co = new Audio("ohd.mp3")
+        co.autoplay = true
+        co.loop = true
+        document.body.appendChild(co)
+      
+    
+        
     </script>
 
     <style>
@@ -67,7 +78,31 @@
 }
         .back:hover {
             cursor: pointer;
+            animation: siz .2s forwards;
+            transform: rotate(180deg);
+
         }
+
+
+        @keyframes siz {
+            from{
+
+            } to {
+                width: 75px;
+                height: 75px;
+            }
+        }
+
+        
+        @keyframes u {
+            from {
+                color:lime;
+            } to {
+                color: black;
+            }
+        }
+
+
 
         body,html {
             background-color:rgb(32,32,32);
@@ -81,7 +116,10 @@
             left: 40%;
             font-family: sans-serif , 'Robotto';
             top:40%;
+            animation: u 5s ease;
 
         }
+
+
     </style>
 </html>

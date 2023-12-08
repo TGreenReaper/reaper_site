@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <!--Do not mind the messy code mb-->
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+        <img src="icons/back.png" class="back" alt="back icon" onclick="location.href = 'index.html' ">
+    </head>
+
+    <body>
+        <div class="act">
+        <h2 style="color:lime;"> An activity you could do: </h2>
+        <h3 id="activity" style="color:rgb(255, 104, 104);"></h3>
+        </div>
+    </body>
+
+    <script>
+fetch("https://www.boredapi.com/api/activity").then(response => response.json().then(data => {
+        document.getElementById("activity").innerHTML =  data.activity
+        }))
+
+   setTimeout(function(){
+    fetch("https://www.boredapi.com/api/activity").then(response => response.json().then(data => {
+        document.getElementById("activity").innerHTML =  data.activity
+        }))
+   }, 3000)
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap');
+        
+@keyframes body {
+    from {
+        opacity: .1;
+        width: 10%;
+        height: 10%;
+    } to {
+        opacity: .3;
+        width: 40%;
+        height: 40%;
+    } to {
+        opacity: .5;
+        width: 60%;
+        height: 60%;
+    } to {
+        opacity: .8;
+        width: 70%;
+        height: 70%;
+    } to {
+        opacity: 1;
+        width: 100%;
+        height: 100%;
+    }
+}
+  body,html {
+         background-color: rgb(32,32,32);
+         font-family: 'Pixelify Sans', sans-serif;
+         text-align: center;
+         animation: body .5s forwards;
+         margin: 0;
+         padding: 0;
+}
+        
+#activity {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.back {
+    right: 96.5%;
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    top:-1.5%;
+}
+
+.act {
+    position: relative;
+    top:45%;
+}
+
+.back:hover {
+            cursor: pointer;
+            animation: siz .2s forwards;
+            transform: rotate(180deg);
+
+        }
+
+
+        @keyframes siz {
+            from{
+
+            } to {
+                width: 75px;
+                height: 75px;
+            }
+        }
+
+    </style>
+</html>

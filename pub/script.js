@@ -19,4 +19,13 @@ function main(){
     document.getElementById("ti-btn").addEventListener("click" , function(){
         location.href = "clock.html";
     })
+
+    document.getElementById("yt-btn").addEventListener("click" , function(){
+       window.open("https://www.youtube.com/channel/UCm20SYVS9nLwwh8XNQMeyxg")
+    })
+
+    document.getElementById("act-btn").addEventListener("click" , function(){
+        location.href = "activity.html";
+     })
+
 }

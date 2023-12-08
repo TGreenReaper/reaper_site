@@ -24,6 +24,8 @@
         height: 100%;
     }
 }
+
+
 body, html {
     margin: 0;
     padding: 0;
@@ -41,10 +43,15 @@ body, html {
     position: relative;
     left: 26%;
     top:25%;
-    display: flexbox;
+    display: block;
     font-family: 'Pixelify Sans', sans-serif;
 }
 
+
+.main button, p{
+    display: flex;
+    position: relative;
+}
 .main h1 {
     text-align: center;
     color: lime;
@@ -94,6 +101,57 @@ body, html {
   }
   
   .ti-p {
+      font-size: 20px;
+      color: lime;
+      font-family: 'Pixelify Sans', sans-serif;
+      
+  }
+
+  
+.yt-btn {
+    color:green;
+    border: none;
+    height:35px;width: 55px;
+    background-image: url("../icons/youtube.png");
+    background-position: center;
+    background-size:40px 40px;
+    background-repeat: no-repeat;
+    background-color: rgb(4, 150, 4);
+    border-radius: 20px;
+  }
+  
+  .yt-btn:hover {
+      cursor: pointer;
+      opacity: .6;
+
+  }
+  
+  .yt-p {
+      font-size: 20px;
+      color: lime;
+      font-family: 'Pixelify Sans', sans-serif;
+      
+  }
+
+  .act-btn {
+    color:green;
+    border: none;
+    height:35px;width: 55px;
+    background-image: url("../icons/activity.png");
+    background-position: center;
+    background-size:40px 40px;
+    background-repeat: no-repeat;
+    background-color: rgb(4, 150, 4);
+    border-radius: 20px;
+  }
+  
+  .act-btn:hover {
+      cursor: pointer;
+      opacity: .6;
+
+  }
+  
+  .act-p {
       font-size: 20px;
       color: lime;
       font-family: 'Pixelify Sans', sans-serif;
